@@ -12,7 +12,7 @@ import requests
 class CTO(object):
     def __init__(self):
         self.file_path = 'D:\\Python\\PycharmProject\\CTO\\{}'
-        self.train_url = 'http://edu.51cto.com/center/wejob/user/train-course-ajax?train_id=104&page=1&size=20'
+        self.train_url = 'http://edu.51cto.com/center/wejob/user/train-course-ajax?train_id=...&page=1&size=20'
         self.course_url = 'http://edu.51cto.com/center/wejob/user/course-info-ajax?&train_course_id={}&page={}&size=20'
         self.lesson_info = 'http://edu.51cto.com/center/player/play/get-lesson-info?type=wejoboutcourse&sign=...&lesson_id={}_{}'
         # 注意可能需要更新cookies，加上u-a或accept
@@ -39,7 +39,7 @@ class CTO(object):
             # 已进行到第三块课程
             if int(file_num) > 2:
                 file_url = 'http://edu.51cto.com' + info['list_url']
-                train_course_id = info['train_course_id']  # 课程的id 如221
+                train_course_id = info['train_course_id']  # 课程的id 如
                 print(train_course_id)
                 path = self.file_path.format(file_num)  # 根据课程数创建对应的课程文件夹
                 f = os.path.exists(path)
